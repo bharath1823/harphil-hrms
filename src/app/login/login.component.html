@@ -1,0 +1,21 @@
+<!-- login.component.html -->
+
+
+<div class="container">
+  <div class="left">
+    <div class="header">
+      <h2 class="animation a1">Welcome Back</h2>
+      <h4 class="animation a2">Log in to your account using email and password</h4>
+    </div>
+    <form action="" (ngSubmit)="onLogin()" [formGroup]="loginForm">
+      <div class="form">
+        <input type="email" class="form-field animation a3" placeholder="Email Address" formControlName="email">
+        <input type="password" class="form-field animation a4" placeholder="Password" formControlName="password">
+        <p class="animation a5"><a href="#">Forgot Password</a></p>
+        <button class="animation a6" [disabled]="!loginForm.valid">LOGIN</button>
+      </div>
+    </form>
+  </div>
+  <div class="right">
+  </div>
+</div>
