@@ -3,12 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AttendeceComponent } from './attendece/attendece.component';
+import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'dashboard',component:DashboardComponent,
     children:[
-      {path:'profile',component:ProfileComponent}
+      {path:'profile',component:ProfileComponent},
+      {path:'attendece',component:AttendeceComponent},
+      {path:'account',component:AccountComponent}
     ]
   }
 ];
