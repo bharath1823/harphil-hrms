@@ -89,6 +89,9 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+            "stylePreprocessorOptions": {
+            "includePaths": [""]
+            },
             "assets": [
               
                 "src/favicon.ico",

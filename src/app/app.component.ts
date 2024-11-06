@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'harphil_site';
+  // url="/harphilwebsite/assets/loginimage.jpg";
 }

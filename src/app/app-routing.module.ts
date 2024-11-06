@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,
     children:[
       {path:'profile',component:ProfileComponent},
-      {path:'attendece',component:AttendeceComponent},
+      {path:'attendence',component:AttendeceComponent},
       {path:'account',component:AccountComponent}
     ]
   }

@@ -1,433 +1,84 @@
-<main class="py-6 bg-surface-secondary">
-    <div class="container-fluid">
-        <!-- Card stats -->
-        <div class="row g-6 mb-6">
-            <div class="col-xl-3 col-sm-6 col-12">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                                <span class="h3 font-bold mb-0">$750.90</span>
-                            </div>
-                            <div class="col-auto">
-                                <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                                    <i class="bi bi-credit-card"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-2 mb-0 text-sm">
-                            <span class="badge badge-pill bg-soft-success text-success me-2">
-                                <i class="bi bi-arrow-up me-1"></i>13%
-                            </span>
-                            <span class="text-nowrap text-xs text-muted">Since last month</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 col-12">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">New projects</span>
-                                <span class="h3 font-bold mb-0">215</span>
-                            </div>
-                            <div class="col-auto">
-                                <div class="icon icon-shape bg-primary text-white text-lg rounded-circle">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-2 mb-0 text-sm">
-                            <span class="badge badge-pill bg-soft-success text-success me-2">
-                                <i class="bi bi-arrow-up me-1"></i>30%
-                            </span>
-                            <span class="text-nowrap text-xs text-muted">Since last month</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 col-12">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Total hours</span>
-                                <span class="h3 font-bold mb-0">1.400</span>
-                            </div>
-                            <div class="col-auto">
-                                <div class="icon icon-shape bg-info text-white text-lg rounded-circle">
-                                    <i class="bi bi-clock-history"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-2 mb-0 text-sm">
-                            <span class="badge badge-pill bg-soft-danger text-danger me-2">
-                                <i class="bi bi-arrow-down me-1"></i>-5%
-                            </span>
-                            <span class="text-nowrap text-xs text-muted">Since last month</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 col-12">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <span class="h6 font-semibold text-muted text-sm d-block mb-2">Work load</span>
-                                <span class="h3 font-bold mb-0">95%</span>
-                            </div>
-                            <div class="col-auto">
-                                <div class="icon icon-shape bg-warning text-white text-lg rounded-circle">
-                                    <i class="bi bi-minecart-loaded"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-2 mb-0 text-sm">
-                            <span class="badge badge-pill bg-soft-success text-success me-2">
-                                <i class="bi bi-arrow-up me-1"></i>10%
-                            </span>
-                            <span class="text-nowrap text-xs text-muted">Since last month</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container p-4">
+    <h3>Attendance Report</h3>
+
+    <!-- Search and Filters -->
+    <div class="d-flex align-items-center mb-3">
+        <div class="me-3">
+            <input type="text" class="form-control" placeholder="Search...">
+            <!-- <button class="btn btn-outline-secondary mt-2">
+                <i class="fas fa-search"></i>
+            </button> -->
         </div>
-        <div class="card shadow border-0 mb-7">
-            <div class="card-header">
-                <h5 class="mb-0">Applications</h5>
+
+        <div class="d-flex align-items-center me-3">
+            <label class=" form-label">Show Entries</label>
+            <select class="form-select">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+
+        
+            <div class="me-3 mb-8 p-5 ">
+                <label for="fromDate" class="form-label">From</label>
+                <input type="date" class="form-control" id="fromDate">
             </div>
-            <div class="table-responsive">
-                <table class="table table-hover table-nowrap">
-                    <thead class="thead-light">
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Date</th>
-                            <th scope="col">Company</th>
-                            <th scope="col">Offer</th>
-                            <th scope="col">Meeting</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Robert Fox
-                                </a>
-                            </td>
-                            <td>
-                                Feb 15, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-1.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Dribbble
-                                </a>
-                            </td>
-                            <td>
-                                $3.500
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-success"></i>Scheduled
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1610271340738-726e199f0258?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Darlene Robertson
-                                </a>
-                            </td>
-                            <td>
-                                Apr 15, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-2.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Netguru
-                                </a>
-                            </td>
-                            <td>
-                                $2.750
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-warning"></i>Postponed
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1610878722345-79c5eaf6a48c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Theresa Webb
-                                </a>
-                            </td>
-                            <td>
-                                Mar 20, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-3.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Figma
-                                </a>
-                            </td>
-                            <td>
-                                $4.200
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-success"></i>Scheduled
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1612422656768-d5e4ec31fac0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Kristin Watson
-                                </a>
-                            </td>
-                            <td>
-                                Feb 15, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-4.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Mailchimp
-                                </a>
-                            </td>
-                            <td>
-                                $3.500
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-dark"></i>Not discussed
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1608976328267-e673d3ec06ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Cody Fisher
-                                </a>
-                            </td>
-                            <td>
-                                Apr 10, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-5.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Webpixels
-                                </a>
-                            </td>
-                            <td>
-                                $1.500
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-danger"></i>Canceled
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Robert Fox
-                                </a>
-                            </td>
-                            <td>
-                                Feb 15, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-1.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Dribbble
-                                </a>
-                            </td>
-                            <td>
-                                $3.500
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-success"></i>Scheduled
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1610271340738-726e199f0258?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Darlene Robertson
-                                </a>
-                            </td>
-                            <td>
-                                Apr 15, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-2.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Netguru
-                                </a>
-                            </td>
-                            <td>
-                                $2.750
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-warning"></i>Postponed
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1610878722345-79c5eaf6a48c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Theresa Webb
-                                </a>
-                            </td>
-                            <td>
-                                Mar 20, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-3.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Figma
-                                </a>
-                            </td>
-                            <td>
-                                $4.200
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-success"></i>Scheduled
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1612422656768-d5e4ec31fac0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Kristin Watson
-                                </a>
-                            </td>
-                            <td>
-                                Feb 15, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-4.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Mailchimp
-                                </a>
-                            </td>
-                            <td>
-                                $3.500
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-dark"></i>Not discussed
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img alt="..." src="https://images.unsplash.com/photo-1608976328267-e673d3ec06ce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" class="avatar avatar-sm rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Cody Fisher
-                                </a>
-                            </td>
-                            <td>
-                                Apr 10, 2021
-                            </td>
-                            <td>
-                                <img alt="..." src="https://preview.webpixels.io/web/img/other/logos/logo-5.png" class="avatar avatar-xs rounded-circle me-2">
-                                <a class="text-heading font-semibold" href="#">
-                                    Webpixels
-                                </a>
-                            </td>
-                            <td>
-                                $1.500
-                            </td>
-                            <td>
-                                <span class="badge badge-lg badge-dot">
-                                    <i class="bg-danger"></i>Canceled
-                                </span>
-                            </td>
-                            <td class="text-end">
-                                <a href="#" class="btn btn-sm btn-neutral">View</a>
-                                <button type="button" class="btn btn-sm btn-square btn-neutral text-danger-hover">
-                                    <i class="bi bi-trash"></i>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <div class="me-3 mb-8 p-5">
+                <label for="toDate" class="form-label">To</label>
+                <input type="date" class="form-control" id="toDate">
             </div>
-            <div class="card-footer border-0 py-5">
-                <span class="text-muted text-sm">Showing 10 items out of 250 results found</span>
-            </div>
+        
+
+        <button class="btn btn-primary ms-auto">
+            <i class="fas fa-download"></i> Export
+        </button>
+    </div>
+
+    <!-- Attendance Table -->
+    <table class="table table-bordered mb-3">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time In</th>
+                <th>Time Out</th>
+                <th>Break Hours</th>
+                <th>Working Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let element of paginatedRecords">
+                <td>{{ element.date }}</td>
+                <td>
+                    <span class="status-dot" [ngClass]="{'on-time': element.onTime, 'late': !element.onTime}"></span>
+                    {{ element.timeIn }}
+                </td>
+                <td>{{ element.timeOut }}</td>
+                <td>{{ element.breakHours }}</td>
+                <td>{{ element.workingHours }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+    </nav>
+
+    <!-- Legend -->
+    <div class="d-flex justify-content-center mt-4">
+        <div class="d-flex align-items-center me-4">
+            <span class="status-dot on-time me-2"></span> On Time
+        </div>
+        <div class="d-flex align-items-center">
+            <span class="status-dot late me-2"></span> Late
         </div>
     </div>
-</main>
+</div>

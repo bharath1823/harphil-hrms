@@ -28,7 +28,7 @@ body {
     flex: 1;
     background-color: black;
     transition: 1s;
-    background-image: url('/harphilwebsite/src/app/assets/loginimage.jpg');
+    background-image: url("/harphilwebsite/assets/loginimage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
