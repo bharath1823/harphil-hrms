@@ -12,7 +12,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AttendeceComponent } from './attendece/attendece.component';
-import { AccountComponent } from './account/account.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -20,7 +19,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDivider } from '@angular/material/divider';
+import { DbImgComponent } from './db-img/db-img.component';
 
+// import { matNativeControl } from '@angular/material/';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     DashboardComponent,
     ProfileComponent,
     AttendeceComponent,
-    AccountComponent
+    DbImgComponent
   ],
   imports: [
     BrowserModule,
@@ -37,10 +41,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    // MatFormFieldModule,
-    // MatInputModule,
-    // MatPaginatorModule,
-    // MatPaginator,
     MatTableModule,
     MatPaginatorModule,
     MatDatepickerModule,
@@ -49,7 +49,16 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatButtonModule,
     MatIconModule,
     MatSelectModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    MatCheckboxModule,
+    MatCheckbox,
+    // matNativeControl,
+    MatPaginator,
+    MatDivider
+   
     
 
     

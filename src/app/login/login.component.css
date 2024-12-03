@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap"); */
 
 body {
     font-family: "Rubik", sans-serif;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -10,6 +11,7 @@ body {
 .container {
     display: flex;
     height: 100vh;
+    background-color: #f0e9e9fb;
 }
 
 .left {
@@ -26,29 +28,28 @@ body {
 
 .right {
     flex: 1;
-    background-color: black;
     transition: 1s;
-    background-image: url("/harphilwebsite/assets/loginimage.jpg");
+    background-image: url(/loginimage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+
 }
 
 .header>h2 {
     margin: 0;
-    color: #4f46a5;
+    color: #f1740e;
 }
 
 .header>h4 {
     margin-top: 10px;
     font-weight: normal;
     font-size: 15px;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(8, 7, 7, 0.4);
 }
 
 .form {
-    max-width: 80%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -80,7 +81,7 @@ body {
 .form>button {
     padding: 12px 10px;
     border: 0;
-    background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
+    background: linear-gradient(to right, #000000 0%, #ff4500 100%);
     border-radius: 3px;
     margin-top: 10px;
     color: #fff;
@@ -121,12 +122,14 @@ body {
 
 @keyframes move {
     0% {
+
         opacity: 0;
         visibility: hidden;
         transform: translateY(-40px);
     }
 
     100% {
+
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -148,9 +151,19 @@ body {
 
 
 @media (max-width: 600px) {
-    .right{
-        display: none;
+
+    /* Hide the .right section completely on mobile */
+    .right {
+        display: none !important;
+        /* Completely hide the right section on mobile */
     }
 
+    /* Disable animations on mobile view */
+    .animation {
+        animation: none;
+        /* Disable any animation */
+    }
+    .left{
+        width: 100%;
+    }
 }
-

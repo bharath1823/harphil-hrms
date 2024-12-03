@@ -4,7 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AttendeceComponent } from './attendece/attendece.component';
-import { AccountComponent } from './account/account.component';
+import { DbImgComponent } from './db-img/db-img.component';
+
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -12,7 +13,7 @@ const routes: Routes = [
     children:[
       {path:'profile',component:ProfileComponent},
       {path:'attendence',component:AttendeceComponent},
-      {path:'account',component:AccountComponent}
+      {path:"db-img",component:DbImgComponent}
     ]
   }
 ];

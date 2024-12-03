@@ -25,10 +25,11 @@ export class LoginComponent {
 
     onLogin() {
         if (this.loginForm.valid) {
-             this.router.navigateByUrl('/dashboard');
+             this.router.navigateByUrl('/dashboard/db-img');
            
         } else {
             alert('Please fill out the form correctly.');
+            
         }
     }
 
