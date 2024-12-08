@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
     selector: 'app-login',
@@ -25,11 +26,16 @@ export class LoginComponent {
 
     onLogin() {
         if (this.loginForm.valid) {
-             this.router.navigateByUrl('/dashboard/db-img');
+          
+            Swal.fire({
+                title: "Login success👍",
+                text: "welcome to the harphil solutions pvt ltd",
+                icon: "success"
+              });
+             this.router.navigateByUrl('/dashboard/db-im');
            
         } else {
             alert('Please fill out the form correctly.');
-            
         }
     }
 

@@ -6,14 +6,13 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:2040/users/login';
 
     constructor(private http: HttpClient) {}
 
-    login(credentials: any) {
-        return of(this.http.post(`${this.apiUrl}`, credentials));
+    login(login:any){
+      return this .http.post('http://localhost:2040/users/login',login,{responseType:'text' as 'json'})
     }
 
 
-  // constructor() { }
+  
 }
