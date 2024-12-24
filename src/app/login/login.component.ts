@@ -23,16 +23,16 @@ export class LoginComponent {
     }
 
 
-
     onLogin() {
         if (this.loginForm.valid) {
+          
           
             Swal.fire({
                 title: "Login success👍",
                 text: "welcome to the harphil solutions pvt ltd",
                 icon: "success"
               });
-             this.router.navigateByUrl('/dashboard/db-im');
+             this.router.navigateByUrl('/dashboard/db-img');
            
         } else {
             alert('Please fill out the form correctly.');

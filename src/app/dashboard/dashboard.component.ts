@@ -7,9 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
-  // logout(){
-  //   console.log("user logout")
-  // }
+
   constructor(private router: Router) {}
 
   ngOnInit() {
