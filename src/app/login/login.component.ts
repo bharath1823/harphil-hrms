@@ -32,7 +32,7 @@ export class LoginComponent {
                 text: "welcome to the harphil solutions pvt ltd",
                 icon: "success"
               });
-             this.router.navigateByUrl('/dashboard/db-im');
+             this.router.navigateByUrl('/dashboard/db-img');
            
         } else {
             alert('Please fill out the form correctly.');
