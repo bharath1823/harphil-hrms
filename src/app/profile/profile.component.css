@@ -19,29 +19,28 @@
 
 .account-details {
   display: flex;
-  flex-wrap: wrap; /* Wrap fields onto new lines */
+  flex-wrap: wrap; 
   justify-content: space-between;
-  /* padding: 0; */
 }
 
 .details-row {
-  width: 48%; /* 2 items per row */
-  margin-bottom: 15px; /* Add spacing between rows */
+  width: 48%; 
+  margin-bottom: 15px; 
   display: flex;
-  flex-direction: column; /* Ensure each field is stacked vertically */
+  flex-direction: column; 
 }
 
 .details-row p {
-  margin: 5px 0; /* Add some margin to separate label and value */
+  margin: 5px 0; 
 }
 
 .pair {
-  /* This will allow pairs of fields to align on the same line */
+  
   display: flex;
   justify-content: space-between;
 }
 
-button {
+.updatebutton {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;

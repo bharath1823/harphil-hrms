@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AttendeceComponent } from './attendece/attendece.component';
 import { DbImgComponent } from './db-img/db-img.component';
+import { PayslipsComponent } from './payslips/payslips.component';
 
 
 const routes: Routes = [
@@ -13,9 +14,11 @@ const routes: Routes = [
     children:[
       {path:'profile',component:ProfileComponent},
       {path:'attendence',component:AttendeceComponent},
-      {path:"db-img",component:DbImgComponent}
+      {path:"db-img",component:DbImgComponent},
+      {path:'payslips',component:PayslipsComponent}
     ]
   }
+  
 ];
 
 @NgModule({

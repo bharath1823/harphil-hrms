@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  constructor(private route:Router){}
   isEditMode: boolean = false;
 
   // Define the employee data as an array of objects
@@ -52,6 +54,9 @@ export class ProfileComponent implements OnInit {
 
     // Save updated data to localStorage
     localStorage.setItem('employeeData', JSON.stringify(this.employeeFields));
+  }
+  topayslip(){
+    this.route.navigateByUrl('/dashboard/payslips')
   }
 }
 

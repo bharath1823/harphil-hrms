@@ -8,13 +8,19 @@
     <p>{{ employeeFields[8].value }}</p> <!-- Role -->
   </div>
 
-  <h2 class="d-flex justify-content-center align-items-center mb-5 p-5">Account Details</h2>
+  <div class="d-flex justify-content-between align-items-center mb-5 p-5">
+    <h2 style="padding-left: 480px;">Account Details</h2>
+    <button class="btn btn-secondary" (click)="topayslip()">View Payslips</button>
+  </div>
+  
 
   <div class="account-details">
     <div *ngFor="let field of employeeFields; let i = index" class="details-row p-3" [ngClass]="{'pair': i % 2 === 0}">
       <p><strong>{{ field.label }}:</strong>
-        <!-- <span *ngIf="!isEditMode">{{ field.value }}</span> -->
-        <span *ngIf="!isEditMode || !field.editable">{{ field.value }}</span>
+        <!-- <span *ngIf="!isEditMode || (isEditMode && field.editable)">{{ field.value }}</span> -->
+        <span *ngIf="!isEditMode">{{ field.value }}</span>
+
+       
 
         <ng-container *ngIf="isEditMode && !field.editable">
           <ng-container [ngSwitch]="field.type">
@@ -32,7 +38,7 @@
     </div>
   </div>
 
-  <button class="btn btn-primary" (click)="toggleEditMode()">{{ isEditMode ? 'Update' : 'Edit' }}</button>
+  <button class="btn btn-primary updatebutton" (click)="toggleEditMode()">{{ isEditMode ? 'Update' : 'Edit' }}</button>
 </div>
 
 
