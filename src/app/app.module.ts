@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCheckbox, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDivider } from '@angular/material/divider';
 import { DbImgComponent } from './db-img/db-img.component';
+import { PayslipsComponent } from './payslips/payslips.component';
 
 // import { matNativeControl } from '@angular/material/';
 
@@ -33,7 +34,8 @@ import { DbImgComponent } from './db-img/db-img.component';
     DashboardComponent,
     ProfileComponent,
     AttendeceComponent,
-    DbImgComponent
+    DbImgComponent,
+    PayslipsComponent
   ],
   imports: [
     BrowserModule,

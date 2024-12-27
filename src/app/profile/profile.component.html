@@ -1,130 +1,44 @@
-<!-- <div class="profile-container">
-    <div class="profile-header">
-        <img src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-cartoon-color-simple-male-avatar-png-image_5230557.jpg"
-            alt="Profile Image" class="profile-image" />
-        <h2 style="color: white;">Jane Cooper</h2>
-        <p>UI/UX DESIGNER</p>
-    </div>
-
-    <mat-divider></mat-divider>
-    <h2 class="d-flex justify-content-center align-items-center mb-5 p-5">Account Details</h2>
-    <div class="account-details">
-
-        <div class="details-row p-3">
-            <p><strong>Employee ID:</strong> {{ employee.employeeId }}</p>
-            <p><strong>Official Email ID:</strong> {{ employee.email }}</p>
-        </div>
-        <div class="details-row p-3">
-            <p><strong>First Name:</strong> {{ employee.firstName }}</p>
-            <p><strong>Last Name:</strong> {{ employee.lastName }}</p>
-        </div>
-        <div class="details-row p-3">
-            <p><strong>Date of Birth:</strong> {{ employee.dob | date:'dd/MM/yyyy' }}</p>
-            <p><strong>Gender:</strong> {{ employee.gender }}</p>
-        </div>
-        <div class="details-row p-3">
-            <p><strong>Phone Number:</strong> {{ employee.phone }}</p>
-            <p><strong>Shift Time:</strong> {{ employee.shiftTime }}</p>
-        </div>
-        <div class="details-row p-3">
-            <p><strong>Role:</strong> {{ employee.role }}</p>
-            <p><strong>Branch:</strong> {{ employee.branch }}</p>
-        </div>
-        <div class="details-row p-3">
-            <p><strong>Address:</strong> {{ employee.address }}</p>
-            <p><strong>Joined Date:</strong> {{ employee.joinedDate | date:'dd-MM-yyyy' }}</p>
-        </div>
-    </div>
-
-
-</div> -->
-
-
 
 <div class="profile-container">
-    <div class="profile-header">
-      <img
-        src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-cartoon-color-simple-male-avatar-png-image_5230557.jpg"
-        alt="Profile Image"
-        class="profile-image"
-      />
-      <h2 style="color: white;">Jane Cooper</h2>
-      <p>UI/UX DESIGNER</p>
-    </div>
-  
-    <h2 class="d-flex justify-content-center align-items-center mb-5 p-5">Account Details</h2>
-   
-   
-  
-    <div class="account-details">
-      <div class="details-row p-3">
-        <p><strong>Employee ID:</strong>
-          <span *ngIf="!editMode">{{ employee.employeeId }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.employeeId" />
-        </p>
-        <p><strong>Official Email ID:</strong>
-          <span *ngIf="!editMode">{{ employee.email }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.email" type="email" />
-        </p>
-      </div>
-      <div class="details-row p-3">
-        <p><strong>First Name:</strong>
-          <span *ngIf="!editMode">{{ employee.firstName }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.firstName" />
-        </p>
-        <p><strong>Last Name:</strong>
-          <span *ngIf="!editMode">{{ employee.lastName }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.lastName" />
-        </p>
-      </div>
-      <div class="details-row p-3">
-        <p><strong>Date of Birth:</strong>
-          <span *ngIf="!editMode">{{ employee.dob | date:'dd/MM/yyyy' }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.dob" type="date" />
-        </p>
-        <p><strong>Gender:</strong>
-          <span *ngIf="!editMode">{{ employee.gender }}</span>
-          <select *ngIf="editMode" [(ngModel)]="employee.gender" class="form-control">
-            <option value="" disabled>Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-        </select>
-        
-        </p>
-      </div>
-      <div class="details-row p-3">
-        <p><strong>Phone Number:</strong>
-          <span *ngIf="!editMode">{{ employee.phone }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.phone" type="tel" />
-        </p>
-        <p><strong>Shift Time:</strong>
-          <span *ngIf="!editMode">{{ employee.shiftTime }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.shiftTime" type="time" />
-        </p>
-      </div>
-      <div class="details-row p-3">
-        <p><strong>Role:</strong>
-          <span *ngIf="!editMode">{{ employee.role }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.role" />
-        </p>
-        <p><strong>Branch:</strong>
-          <span *ngIf="!editMode">{{ employee.branch }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.branch" />
-        </p>
-      </div>
-      <div class="details-row p-3">
-        <p><strong>Address:</strong>
-          <span *ngIf="!editMode">{{ employee.address }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.address" />
-        </p>
-        <p><strong>Joined Date:</strong>
-          <span *ngIf="!editMode">{{ employee.joinedDate | date:'dd-MM-yyyy' }}</span>
-          <input class="form-control" *ngIf="editMode" [(ngModel)]="employee.joinedDate" type="date" />
-        </p>
-      </div>
-    </div>
-   
-    <button class="btn btn-primary" (click)="toggleEditMode()">{{ editMode ? 'Update' : 'Edit' }}</button>
+  <div class="profile-header">
+    <img
+      src="https://png.pngtree.com/png-clipart/20200224/original/pngtree-cartoon-color-simple-male-avatar-png-image_5230557.jpg"
+      alt="Profile Image" class="profile-image" />
+    <h2 style="color: white;">{{ employeeFields[0].value }} {{ employeeFields[2].value }} {{ employeeFields[3].value }}</h2>
+    <p>{{ employeeFields[8].value }}</p> <!-- Role -->
+  </div>
+
+  <div class="d-flex justify-content-between align-items-center mb-5 p-5">
+    <h2 style="padding-left: 480px;">Account Details</h2>
+    <button class="btn btn-secondary" (click)="topayslip()">View Payslips</button>
   </div>
   
-  
+
+  <div class="account-details">
+    <div *ngFor="let field of employeeFields; let i = index" class="details-row p-3" [ngClass]="{'pair': i % 2 === 0}">
+      <p><strong>{{ field.label }}:</strong>
+        <!-- <span *ngIf="!isEditMode || (isEditMode && field.editable)">{{ field.value }}</span> -->
+        <span *ngIf="!isEditMode">{{ field.value }}</span>
+
+       
+
+        <ng-container *ngIf="isEditMode && !field.editable">
+          <ng-container [ngSwitch]="field.type">
+            <input *ngSwitchCase="'text'" class="form-control" [(ngModel)]="field.value" />
+            <input *ngSwitchCase="'email'" class="form-control" [(ngModel)]="field.value" type="email" />
+            <input *ngSwitchCase="'tel'" class="form-control" [(ngModel)]="field.value" type="tel" />
+            <input *ngSwitchCase="'time'" class="form-control" [(ngModel)]="field.value" type="time" />
+            <input *ngSwitchCase="'date'" class="form-control" [(ngModel)]="field.value" type="date" />
+            <select *ngSwitchCase="'select'" class="form-control" [(ngModel)]="field.value">
+              <option *ngFor="let option of field.options" [value]="option">{{ option }}</option>
+            </select>
+          </ng-container>
+        </ng-container>
+      </p>
+    </div>
+  </div>
+
+  <button class="btn btn-primary updatebutton" (click)="toggleEditMode()">{{ isEditMode ? 'Update' : 'Edit' }}</button>
+</div>
+
+
